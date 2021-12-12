@@ -29,10 +29,12 @@
 if (has_nav_menu('primary')) {
     wp_nav_menu([
         'theme_location' => 'primary',
+        'depth' => 3,
         'container' => false,
-        'menu_class' => 'menu',
+        'menu_class' => 'navbar-nav ml-auto',
         'fallback_cb' => false,
-        'depth' => 4,
+
+        'walker' => new Cityandpeople_Nav_Walker(),
     ]);
 }
 ?>
