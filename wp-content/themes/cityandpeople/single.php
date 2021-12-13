@@ -114,4 +114,23 @@ the_content();
 
 <?php get_sidebar('second') /* sidebar-second.php */?>
 
+
+<?php
+if (is_single() && is_post_type('high-school')) {
+    $arr = get_post_custom();
+    foreach ($arr as $key => $fields) {
+        if (!is_protected_meta($key, 'post')) {
+            echo "<div class=\"col-lg-3\">";
+            echo '<div class="card">';
+            print_r("<div class=\"card-header\"><h4 class=\"card-title\">{$key}</div>");
+            foreach ($fields as $field) {
+                print_r("<div class=\"card-body\"><p class=\"card-text\">{$field}</p></div>");
+            }
+            echo "</div>";
+            echo "</div>";
+        }
+    }
+}
+?>
+
 <?php get_footer();
