@@ -44,6 +44,7 @@ if (has_nav_menu('primary')) {
     </nav>
 
     <header>
+        <?php if (is_front_page()) {?>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -91,5 +92,5 @@ if (has_nav_menu('primary')) {
                 <span class="sr-only">Next</span>
             </a>
         </div>
-
+        <?php }?>
     </header>
