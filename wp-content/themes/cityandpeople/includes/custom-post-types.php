@@ -2,18 +2,18 @@
 function cityandpeople_register_post_type_init()
 {
     $labels = array(
-        'name' => 'High school',
-        'singular_name' => 'High school', // show in admin panel add->Movie
-        'add_new' => 'Add high school',
-        'add_new_item' => 'Add new high school', // <title>
-        'edit_item' => 'Edit high schooln',
-        'new_item' => 'New high school',
-        'all_items' => 'All high school',
-        'view_item' => 'View high school',
-        'search_items' => 'Search high school',
-        'not_found' => 'High school not found.',
-        'not_found_in_trash' => 'High school not found in trash.',
-        'menu_name' => 'High school',
+        'name' => __('High school'),
+        'singular_name' => __('High school'), // show in admin panel add->Movie
+        'add_new' => __('Add high school'),
+        'add_new_item' => __('Add new high school'), // <title>
+        'edit_item' => __('Edit high schooln'),
+        'new_item' => __('New high school'),
+        'all_items' => __('All high school'),
+        'view_item' => __('View high school'),
+        'search_items' => __('Search high school'),
+        'not_found' => __('High school not found.'),
+        'not_found_in_trash' => __('High school not found in trash.'),
+        'menu_name' => __('High school'),
     );
     $args = array(
         'labels' => $labels,

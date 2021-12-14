@@ -3,18 +3,18 @@
 function bootkit_register_post_type_init()
 {
     $labels = array(
-        'name' => 'Movies',
-        'singular_name' => 'Movie', // show in admin panel add->Movie
-        'add_new' => 'Add movie',
-        'add_new_item' => 'Add new movie', // <title>
-        'edit_item' => 'Edit movie',
-        'new_item' => 'New movie',
-        'all_items' => 'All movies',
-        'view_item' => 'View movies',
-        'search_items' => 'Search movies',
-        'not_found' => 'Movies not found.',
-        'not_found_in_trash' => 'Movies not found in trash.',
-        'menu_name' => 'Movies',
+        'name' => __('Movies'),
+        'singular_name' => __('Movie'), // show in admin panel add->Movie
+        'add_new' => __('Add movie'),
+        'add_new_item' => __('Add new movie'), // <title>
+        'edit_item' => __('Edit movie'),
+        'new_item' => __('New movie'),
+        'all_items' => __('All movies'),
+        'view_item' => __('View movies'),
+        'search_items' => __('Search movies'),
+        'not_found' => __('Movies not found.'),
+        'not_found_in_trash' => __('Movies not found in trash.'),
+        'menu_name' => __('Movies'),
     );
     $args = array(
         'labels' => $labels,

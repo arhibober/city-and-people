@@ -1,10 +1,10 @@
 <?php
-function bootkit_widgets()
+function cityandpeople_widgets()
 {
     register_sidebar([
-        'name' => __('Bootkit first Sidebar', 'bootkit'),
-        'id' => 'bootkit_sidebar',
-        'description' => __('Bootkit first Sidebar for something.'),
+        'name' => __('Cityandpeople first Sidebar', 'cityandpeople'),
+        'id' => 'cityandpeople_sidebar',
+        'description' => __('cityandpeople first Sidebar for something.'),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3 class="widget-title">',

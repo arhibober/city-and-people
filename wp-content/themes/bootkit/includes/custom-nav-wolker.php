@@ -1,29 +1,6 @@
 <?php
 class Bootkit_Nav_Walker extends Walker_Nav_Menu
 {
-    // public function start_lvl(&$output, $depth = 0, $args = [])
-    // {
-    //     $output .= '<ul class="dropdown-menu dropdown-menu-right">';
-    // }
-
-    // public function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
-    // {
-    //     $display_depth = ($depth + 1);
-    //     $classes = array(
-    //         'nav-item',
-
-    //         ($display_depth >= 2 ? 'sub-sub-menu' : ''),
-    //         'menu-depth-' . $display_depth,
-    //     );
-    //     $class_names = implode(' ', $classes);
-    //     // $output .= '<li class="nav-item dropdown">';
-    //     $output .= '<li class="' . $class_names . '">';
-    //     $output .= $args->before;
-    //     $output .= '<a class="nav-link dropdown-toggle" href="' . $item->url . '">';
-    //     $output .= $args->link_before . $item->title . $args->Link_after;
-    //     $output .= '</a>';
-    //     $output .= $args->after;
-    // }
 
     public function start_lvl(&$output, $depth = 0, $args = array())
     {
