@@ -104,7 +104,9 @@ the_content();
         }
 
     }
-}?>
+}
+include get_theme_file_path('last_posts.php');
+?>
         </div>
         <?php get_sidebar();?>
         <!-- /.row -->
