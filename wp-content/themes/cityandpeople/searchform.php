@@ -4,7 +4,7 @@
 <!-- Search Widget -->
 <h5 class="card-header">Search</h5>
 <div class="card-body">
-    <form role="search" method="get" class="searchf-orm" action="<?php echo home_url('/'); ?>">
+    <form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
         <div class="input-group">
             <input type="search" id="<?php echo $unique_id; ?>" name="s" value="<?php echo get_search_query() ?>"
                 class="form-control" placeholder="<?php _e('Search');?>">

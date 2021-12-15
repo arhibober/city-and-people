@@ -31,12 +31,12 @@ get_header("v2");?>
         <p>
             <?php _e("The page you're looking for could not be found")?>
 
-        <h2>Страницы</h2>
+        <h2><?php _e("Pages")?></h2>
         <ul>
             <?php wp_list_pages('title_li=');?>
         </ul>
 
-        <h2>Статьи по категориям</h2>
+        <h2><?php _e("Pages by Categories")?></h2>
         <?php
 $cats = get_categories();
 foreach ($cats as $cat) {

@@ -9,10 +9,8 @@ add_action('add_meta_boxes', 'my_extra_fields', 1);
 function location_fields_box_highschool_func($post)
 {
     ?>
-<p><label><input type="text" name="extra[location]" value="<?php echo get_post_meta($post->ID, 'location', 1); ?>"
-            style="width:50%" /> ? Header location (location)</label></p>
-<p><label><input type="text" name="extra[year]" value="<?php echo get_post_meta($post->ID, 'year', 1); ?>"
-            style="width:50%" /> ? Header year (year)</label></p>
+<p><label><input type="text" name="extra[rating]" value="<?php echo get_post_meta($post->ID, 'rating', 1); ?>"
+            style="width:50%" /> ? Header rating (rating)</label></p>
 
 <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
 <?php
@@ -32,7 +30,7 @@ function my_extra_fields_update($post_id)
         return false;
     }
 
-    // ОК!  Save/update
+// ОК!  Save/update
     $_POST['extra'] = array_map('sanitize_text_field', $_POST['extra']);
     foreach ($_POST['extra'] as $key => $value) {
         if (empty($value)) {

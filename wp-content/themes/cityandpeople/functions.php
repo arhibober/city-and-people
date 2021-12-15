@@ -10,13 +10,14 @@ include get_theme_file_path('includes/widgets.php');
 include get_theme_file_path('includes/custom-nav-walker.php');
 include get_theme_file_path('includes/custom-post-types.php');
 include get_theme_file_path('includes/custom-fields-type.php');
+include get_theme_file_path('includes/acf-fields.php');
 include get_theme_file_path('includes/custom-meta-boxes.php');
-include get_theme_file_path('includes/filter-year.php');
+include get_theme_file_path('includes/meta-filter.php');
 // Hooks
 add_action('wp_enqueue_scripts', 'cityandpeople_enqueue');
 add_action('after_setup_theme', 'cityandpeople_setup_theme');
 add_action('widgets_init', 'cityandpeople_widgets');
 add_action('init', 'cityandpeople_register_post_type_init');
-add_action('init', 'true_custom_fields');
+add_action('pre_get_posts', 'featured_show', 1);
 
 // Shortcodes
