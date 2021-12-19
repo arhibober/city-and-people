@@ -20,13 +20,18 @@ $name = get_field('name');
 $surname = get_field('surname');
 $portrait = get_field('portrait') ?: 'Portrait';
 $date_born = get_field('date_born') ?: 'Date of born';
+$town_born = get_field('town_born') ?: 'Town of born';
+$description = get_field('description') ?: 'Description';
 
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-    <div class="mab-summery">
-        <div class="mab-summery-text"><?php echo $name; ?></div>
-        <div class="mab-summery-text"><?php echo $surname; ?></div>
-        <div class="mab-summery-image"><img src="<?php echo $portrait; ?>" /></div>
-        <div class="mab-summery-text"><?php echo $date_born; ?></div>
-</div>
+    <div class="card  p-3">
+        <img src="<?php echo $portrait; ?>" class="card-img-top " alt="Card image" style="width:100%" />
+        <div class="card-body">
+            <h4 class="card-title"><?php echo "$name $surname"; ?></h4>
+            <p class="card-text"><?php _e("Was born:");
+echo "&nbsp;$date_born, $town_born";?></p>
+            <p class="card-text"><?php echo "$description"; ?></p>
+        </div>
+    </div>
 </div>
