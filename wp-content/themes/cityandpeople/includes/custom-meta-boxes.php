@@ -11,6 +11,8 @@ function location_fields_box_highschool_func($post)
     ?>
 <p><label><input type="text" name="extra[rating]" value="<?php echo get_post_meta($post->ID, 'rating', 1); ?>"
             style="width:50%" /> ? Header rating (rating)</label></p>
+<p><label><input type="text" name="extra[o_year]" value="<?php echo get_post_meta($post->ID, 'o_year', 1); ?>"
+            style="width:50%" /> ? Header orginazed year (o_year)</label></p>
 
 <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
 <?php

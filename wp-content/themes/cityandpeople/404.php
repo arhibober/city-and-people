@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage city-and-people
- * @since City and People 1.0
+ * @since City and People1 1.0
  */
 
 get_header("v2");?>
