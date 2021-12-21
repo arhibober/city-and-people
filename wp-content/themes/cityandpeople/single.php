@@ -102,9 +102,10 @@ the_content();
         if (comments_open() || get_comments_number()) {
             comments_template();
         }
-        if (is_single() && is_post_type('high-school')) {
+        if (is_single() && custom_fields_type::is_post_type('high-school')) {
             $arr = get_post_custom();
-            echo "lll";
+            //echo "lll";
+            //print_r($arr);
             foreach ($arr as $key => $fields) {
                 if (!is_protected_meta($key, 'post')) {
                     echo "<div class=\"col-lg-3\">";
