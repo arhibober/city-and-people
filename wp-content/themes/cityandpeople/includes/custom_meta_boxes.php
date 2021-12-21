@@ -1,7 +1,6 @@
 <?php
 function my_extra_fields()
 {
-// add_meta_box('extra_fields', 'Extra fields', 'extra_fields_box_func', 'post', 'normal', 'high');
     add_meta_box('location', 'Location', 'location_fields_box_highschool_func', 'high-school', 'normal', 'high');
 }
 add_action('add_meta_boxes', 'my_extra_fields', 1);

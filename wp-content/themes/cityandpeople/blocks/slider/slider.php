@@ -1,7 +1,6 @@
 <?php
 
 // Create id attribute allowing for custom "anchor" value.
-echo "ggg";
 $id = 'slider-' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
@@ -26,10 +25,10 @@ if ($is_preview) {
         <?php while (have_rows('slides')): the_row();
     $image = get_sub_field('image');
     ?>
-        <div>
-            <?php echo wp_get_attachment_image($image['id'], 'full'); ?>
-        </div>
-        <?php endwhile;?>
+	        <div>
+	            <?php echo wp_get_attachment_image($image['id'], 'full'); ?>
+	        </div>
+	        <?php endwhile;?>
     </div>
     <?php else: ?>
     <p>Please add some slides.</p>

@@ -104,8 +104,6 @@ the_content();
         }
         if (is_single() && custom_fields_type::is_post_type('high-school')) {
             $arr = get_post_custom();
-            //echo "lll";
-            //print_r($arr);
             foreach ($arr as $key => $fields) {
                 if (!is_protected_meta($key, 'post')) {
                     echo "<div class=\"col-lg-3\">";

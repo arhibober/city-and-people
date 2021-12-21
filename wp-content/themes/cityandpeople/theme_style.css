@@ -53,3 +53,7 @@
   text-transform: uppercase;
   padding-top: 10px;
 }
+
+li.page-item {
+  margin: 5px;
+}

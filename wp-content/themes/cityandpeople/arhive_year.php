@@ -40,7 +40,6 @@ global $wpdb;
 if ($the_query->have_posts()) {
     while ($the_query->have_posts()) {
         $meta_values = $wpdb->get_results("SELECT DISTINCT meta_value FROM $wpdb->postmeta WHERE meta_key LIKE 'year'", OBJECT);
-        echo "!!!!!";
         print_r($meta_values);
         print_r($the_query->get_post_meta($post->ID, 'year', true));
         $the_query->the_post();
