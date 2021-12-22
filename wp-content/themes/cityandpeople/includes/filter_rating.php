@@ -37,4 +37,3 @@ function filter_rating($query)
         // $query = new WP_Query($args);
     }
 }
-add_action('pre_get_posts', 'filter_rating');
