@@ -18,6 +18,7 @@ include get_theme_file_path('includes/acf_filter_year.php');
 //include get_theme_file_path('includes/acf-slider.php');
 include get_theme_file_path('includes/my_slider.php');
 include get_theme_file_path('includes/cpt_gutenberg_support.php');
+include get_theme_file_path('includes/gutenberg_template_to_single_post.php');
 // Hooks
 add_action('wp_enqueue_scripts', [new enqueue(), 'cityandpeople_enqueue']);
 add_action('after_setup_theme', [new setup(), 'cityandpeople_setup_theme']);
@@ -32,5 +33,6 @@ add_action('pre_get_posts', 'acf_filter_year', 1);
 add_action('acf/init', [new my_slider(), 'my_register_blocks']);
 //add_action('init', [new custom_fields_type(), 'is_post_type']);
 add_action('init', 'custom_post_type');
+add_action('init', 'gutenberg_template_to_single_post');
 
 // Shortcodes
