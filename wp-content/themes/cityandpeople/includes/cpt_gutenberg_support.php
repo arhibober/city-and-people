@@ -1,5 +1,5 @@
 <?php
-class cpt_gutenberg_support
+class Cpt_Gutenberg_Support
 {
     public function __construct()
     {

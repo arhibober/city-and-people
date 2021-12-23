@@ -1,5 +1,5 @@
 <?php
-class setup
+class Setup
 {
     public function __construct()
     {

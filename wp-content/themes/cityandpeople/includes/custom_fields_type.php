@@ -1,5 +1,5 @@
 <?php
-class custom_fields_type
+class Custom_Fields_Type
 {
     public function __construct()
     {

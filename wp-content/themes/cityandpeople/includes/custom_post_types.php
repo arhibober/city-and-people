@@ -1,5 +1,5 @@
 <?php
-class custom_post_types
+class Custom_Post_Types
 {
     public function __construct()
     {

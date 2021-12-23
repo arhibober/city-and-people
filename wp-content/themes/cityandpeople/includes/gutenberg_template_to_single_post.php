@@ -1,5 +1,5 @@
 <?php
-class gutenberg_template_to_single_post
+class Gutenberg_Template_To_Single_Post
 {
     public function __construct()
     {

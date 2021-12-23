@@ -1,5 +1,5 @@
 <?php
-class widgets
+class Widgets
 {
     public function __construct()
     {

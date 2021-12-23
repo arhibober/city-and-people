@@ -1,5 +1,5 @@
 <?php
-class my_slider
+class My_Slider
 {
     public function __construct()
     {
