@@ -7,6 +7,7 @@ define('CITYANDPEOPLE_DEV_MODE', true);
 include get_theme_file_path('includes/core/Enqueue.php');
 include get_theme_file_path('includes/core/Setup.php');
 include get_theme_file_path('includes/core/Widgets.php');
+include get_theme_file_path('includes/core/Options.php');
 include get_theme_file_path('includes/core/Cityandpeople_Nav_Walker.php');
 include get_theme_file_path('includes/core/Custom_Post_Types.php');
 include get_theme_file_path('includes/core/Custom_Fields_Type.php');
@@ -34,6 +35,7 @@ add_action('pre_get_posts', /*[new acf_filter_rating($query), */'acf_filter_rati
 add_action('pre_get_posts', /*[new acf_filter_year($query), */'acf_filter_year', 1);
 //add_action('pre_get_posts', 'filter_year', 1);
 add_action('acf/init', [new My_Slider(), 'my_register_blocks']);
+add_action('acf/init', [new Options(), 'options']);
 add_action('init', [new Custom_Fields_Type(), 'is_post_type']);
 add_action('init', [new Cpt_Gutenberg_Support(), 'custom_post_types']);
 add_action('init', [new Gutenberg_Template_To_Single_Post(), 'gutenberg_template_to_single_post']);
