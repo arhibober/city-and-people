@@ -6,14 +6,13 @@
         <div class="col-lg-8">
             <?php if (have_posts()) {
     while (have_posts()) {
+//echo "lll";
         the_post();
         global $post;
         $author_ID = $post->post_author;
         $author_URL = get_author_posts_url($author_ID);
 
         ?>
-
-
 
             <!-- Title -->
             <h1 class="mt-4"><?php the_title()?></h1>
@@ -75,8 +74,6 @@ the_content();
                     <?php next_post_link();?>
                 </li>
             </ul>
-
-
 
             <!-- Post Author Info -->
 

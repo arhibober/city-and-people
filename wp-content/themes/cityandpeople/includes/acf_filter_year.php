@@ -1,10 +1,17 @@
 <?php
-function acf_filter_year($query)
+/*class acf_filter_year
 {
+public $query;
+public function __construct($my_query)
+{
+$this->$query = $my_query;
+}
+
+public*/function acf_filter_year($query)
+{
+    //print_r($this->$query);
     if (isset($_GET["o-year"]) && is_archive()) {
-
         $query->set('post_type', ['high-school']);
-
         $query->set('numberposts', -1);
         $query->set('meta_key', ['o-year']);
         $query->set('meta_value', $_GET['o-year']);
@@ -12,3 +19,4 @@ function acf_filter_year($query)
         $query->set('compare', "=");
     }
 }
+//}

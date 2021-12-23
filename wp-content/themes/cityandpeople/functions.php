@@ -23,16 +23,19 @@ include get_theme_file_path('includes/gutenberg_template_to_single_post.php');
 add_action('wp_enqueue_scripts', [new enqueue(), 'cityandpeople_enqueue']);
 add_action('after_setup_theme', [new setup(), 'cityandpeople_setup_theme']);
 add_action('widgets_init', [new widgets(), 'cityandpeople_widgets']);
-add_action('init', [new custom_post_type(), 'cityandpeople_register_post_type_init']);
-add_action('init', [new custom_post_type(), 'cityandpeople_register_human_init']);
-add_action('init', [new custom_post_type(), 'cityandpeople_register_theatre_init']);
-add_action('init', [new custom_post_type(), 'cityandpeople_register_museum_init']);
-add_action('pre_get_posts', 'acf_filter_rating', 1);
-add_action('pre_get_posts', 'acf_filter_year', 1);
+add_action('init', [new custom_post_types(), 'cityandpeople_register_post_type_init']);
+add_action('init', [new custom_post_types(), 'cityandpeople_register_human_init']);
+add_action('init', [new custom_post_types(), 'cityandpeople_register_theatre_init']);
+add_action('init', [new custom_post_types(), 'cityandpeople_register_museum_init']);
+//$rating_object = new acf_filter_rating($query);
+//echo " ro: ";
+//print_r($rating_object);
+add_action('pre_get_posts', /*[new acf_filter_rating($query), */'acf_filter_rating', 1);
+add_action('pre_get_posts', /*[new acf_filter_year($query), */'acf_filter_year', 1);
 //add_action('pre_get_posts', 'filter_year', 1);
 add_action('acf/init', [new my_slider(), 'my_register_blocks']);
-//add_action('init', [new custom_fields_type(), 'is_post_type']);
-add_action('init', 'custom_post_type');
-add_action('init', 'gutenberg_template_to_single_post');
+add_action('init', [new custom_fields_type(), 'is_post_type']);
+add_action('init', [new cpt_gutenberg_support(), 'custom_post_types']);
+add_action('init', [new gutenberg_template_to_single_post(), 'gutenberg_template_to_single_post']);
 
 // Shortcodes

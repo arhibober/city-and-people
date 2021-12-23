@@ -1,7 +1,7 @@
 <?php
 class widgets
 {
-    public function __constructor ()
+    public function __construct()
     {
     }
     public function cityandpeople_widgets()

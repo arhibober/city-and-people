@@ -1,7 +1,7 @@
 <?php
-class custom_post_type
+class custom_post_types
 {
-    public function __constructor()
+    public function __construct()
     {
     }
     public function cityandpeople_register_post_type_init()
@@ -31,6 +31,7 @@ class custom_post_type
         );
         register_post_type('high-school', $args);
     }
+
     public function cityandpeople_register_human_init()
     {
         $labels = array(
@@ -58,6 +59,7 @@ class custom_post_type
         );
         register_post_type('human', $args);
     }
+
     public function cityandpeople_register_theatre_init()
     {
         $labels = array(
@@ -85,6 +87,7 @@ class custom_post_type
         );
         register_post_type('theatre', $args);
     }
+
     public function cityandpeople_register_museum_init()
     {
         $labels = array(

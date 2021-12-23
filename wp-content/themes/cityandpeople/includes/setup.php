@@ -1,7 +1,7 @@
 <?php
 class setup
 {
-    public function __constructor()
+    public function __construct()
     {
     }
     public function cityandpeople_setup_theme()

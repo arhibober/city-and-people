@@ -1,7 +1,7 @@
 <?php
 class my_slider
 {
-    public function __constructor()
+    public function __construct()
     {
     }
     public function my_register_blocks()
