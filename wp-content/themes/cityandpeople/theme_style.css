@@ -57,3 +57,8 @@
 li.page-item {
   margin: 5px;
 }
+
+/*div#swipebox-overlay {
+  width: 0 !important;
+  height: 0 !important;
+}*/

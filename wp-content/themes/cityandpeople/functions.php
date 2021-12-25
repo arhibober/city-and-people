@@ -40,7 +40,7 @@ add_action('acf/init', [new Options(), 'options']);
 add_action('init', [new Custom_Fields_Type(), 'is_post_type']);
 add_action('init', [new Cpt_Gutenberg_Support(), 'custom_post_types']);
 add_action('init', [new Gutenberg_Template_To_Single_Post(), 'gutenberg_template_to_single_post']);
-add_action('init', [new Flickr_Cache(), 'get_User_ID']);
+//add_action('init', [new Flickr_Cache(), 'get_User_ID']);
 add_action('init', [new Flickr_Cache(), 'get_API_Key']);
 add_action('init', [new Flickr_Cache(), 'get_API_Secret']);
 

@@ -64,6 +64,8 @@ the_content();
             <?php the_tags('', ', ');?>
 
             <hr>
+            <img
+                src="<?php echo get_template_directory_uri(); ?>/images/pngtree-red-heart-icon-isolated-png-image_1726594.jpg" id="heart"/>
 
             <!-- Pagination -->
             <ul class="pagination justify-content-center mb-4">
