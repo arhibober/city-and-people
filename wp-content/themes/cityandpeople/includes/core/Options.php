@@ -15,8 +15,5 @@ class Options
                 'redirect' => false,
             ]
         );
-        the_field('Header logo', 'option');
-        the_field('Footer logo', 'option');
-        the_field('Contact phone', 'option');
     }
 }
