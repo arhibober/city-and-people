@@ -57,3 +57,26 @@
 li.page-item {
   margin: 5px;
 }
+
+/*div#swipebox-overlay {
+  width: 0 !important;
+  height: 0 !important;
+}*/
+
+#voices {
+  display: table;
+}
+
+.heart {
+  width: 100px;
+  background-size: 100%;
+}
+
+#voices * {
+  display: table-cell;
+}
+
+.heart-gray {
+  background-image: url("http://localhost/city-and-people/wp-content/themes/cityandpeople/images/index.png");
+  height: 60px;
+}

@@ -7,6 +7,7 @@ class enqueue
     public function cityandpeople_enqueue()
     {
         $url = get_theme_file_uri();
+        echo " urljsajsxjs: " . $url . '/js/ajax.js';
 
         $ver = CITYANDPEOPLE_DEV_MODE ? time() : false;
 
@@ -17,6 +18,7 @@ class enqueue
         wp_register_style('theme_style', $url . '/theme_style.css', [], $ver);
 
         wp_register_script('cityandpeople_bootstrap', $url . '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js', 'jquery', $ver, true);
+        wp_register_script('cityandpeople_ajax', $url . '/js/ajax.js', 'jquery', $ver, true);
 
         wp_enqueue_style('cityandpeople_bootstrap');
         wp_enqueue_style('cityandpeople_modern_business');
@@ -25,6 +27,7 @@ class enqueue
 
         wp_enqueue_script('jquery');
         wp_enqueue_script('cityandpeople_bootstrap');
+        wp_enqueue_script('cityandpeople_ajax');
         wp_enqueue_style('style', get_stylesheet_uri());
 
     }

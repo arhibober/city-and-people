@@ -64,6 +64,12 @@ the_content();
             <?php the_tags('', ', ');?>
 
             <hr>
+            <div id="voices">
+                <div class="heart heart-gray"></div>
+                <span id="voices_value"><?php the_field('voices');?></span>
+            </div>
+
+
 
             <!-- Pagination -->
             <ul class="pagination justify-content-center mb-4">
