@@ -64,8 +64,12 @@ the_content();
             <?php the_tags('', ', ');?>
 
             <hr>
-            <img
-                src="<?php echo get_template_directory_uri(); ?>/images/pngtree-red-heart-icon-isolated-png-image_1726594.jpg" id="heart"/>
+            <div id="voices">
+                <div class="heart heart-gray"></div>
+                <span id="voices_value"><?php the_field('voices');?></span>
+            </div>
+
+
 
             <!-- Pagination -->
             <ul class="pagination justify-content-center mb-4">

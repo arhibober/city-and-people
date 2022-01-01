@@ -21,6 +21,7 @@ include get_theme_file_path('includes/core/My_Slider.php');
 include get_theme_file_path('includes/core/Cpt_Gutenberg_Support.php');
 include get_theme_file_path('includes/core/Gutenberg_Template_To_Single_Post.php');
 include get_theme_file_path('includes/core/Flickr_Cache.php');
+include get_theme_file_path('includes/core/Voices.php');
 // Hooks
 add_action('wp_enqueue_scripts', [new Enqueue(), 'cityandpeople_enqueue']);
 add_action('after_setup_theme', [new Setup(), 'cityandpeople_setup_theme']);
@@ -43,5 +44,15 @@ add_action('init', [new Gutenberg_Template_To_Single_Post(), 'gutenberg_template
 //add_action('init', [new Flickr_Cache(), 'get_User_ID']);
 add_action('init', [new Flickr_Cache(), 'get_API_Key']);
 add_action('init', [new Flickr_Cache(), 'get_API_Secret']);
+add_action('wp_enqueue_scripts', [new Voices(), 'blog_js'], 99);
+add_action('rest_api_init', function () {
+
+    //echo "hhh";
+    register_rest_route('example/v2', '/likes/(?P<id>\d+)', array(
+        'methods' => array('GET', 'POST'),
+        'callback' => array("Voices", 'example__like'),
+    ));
+
+});
 
 // Shortcodes
